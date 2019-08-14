@@ -1,0 +1,10 @@
+version: '3'
+services: 
+  web:
+    restart: "on-failure"
+    build: .
+    ports:
+      - "3001:3001"
+    volumes:
+      - /app/node_modules
+      - .:/app
